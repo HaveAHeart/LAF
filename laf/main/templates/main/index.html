@@ -207,10 +207,12 @@ footer {
 		</header>
 		{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 		{% csrf_token %}
+		{% load static %}
 		{% for ad in latest_ads %}
 	<div class="cont-ob">
         <div class="ob">
-		<div class="img-container"><img src="foto1.jpg" width="130" height="130"></div>
+		<div class="img-container">
+			<img width="130" height="130" src="{% static 'foto1.jpg' %}"></div>
 		<div class="text-container">
 		  <ul>
 			<li>{{ ad.name }}</li>

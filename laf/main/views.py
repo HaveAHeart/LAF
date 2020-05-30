@@ -1,3 +1,5 @@
+import os
+from django.conf import settings
 from django.http import Http404, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.utils import timezone
@@ -10,20 +12,22 @@ from .models import Ad
 
 def index(request):
     latest_ads = Ad.objects.order_by('-time')[:20]
-    context = {'latest_ads': latest_ads}
+    path = os.path.join(settings.MEDIA_URL, "foto1.jpg")
+    context = {'latest_ads': latest_ads, 'path': path}
     return render(request, 'main/index.html', context)
 
 
 def search(request):
     inName = request.POST['searchText']
-    if inName is '':
-        latest_ads = Ad.objects.order_by('-time')[:20]
-    elif inName is not '':
+    inType = request.POST['searchType']
+    if inName is not '':
         inName = str(inName)
         latest_ads = Ad.objects.filter(type=inType).filter(name=inName).order_by('-time')[:20]
     else:
         latest_ads = Ad.objects.filter(type=inType).order_by('-time')[:20]
-    context = {'latest_ads': latest_ads}
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(BASE_DIR, 'laf', 'media', 'foto1.jpg')
+    context = {'latest_ads': latest_ads, 'path': path}
     return render(request, 'main/index.html', context)
 
 
@@ -48,4 +52,7 @@ def generate(request):
 
 
 def details(request):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(BASE_DIR, 'laf', 'media', 'foto1.jpg')
+    context = {'latest_ads': {}, 'path': path}
     return render(request, 'main/index.html', context={})

@@ -1,5 +1,6 @@
 from django.urls import path
 
+
 from . import views
 
 urlpatterns = [
@@ -12,4 +13,6 @@ urlpatterns = [
     path('newItem/', views.newItemPage, name='newItem'),
     # ex: /main/43/
     path('<int:adID>/', views.details, name='details'),
+
 ]
+

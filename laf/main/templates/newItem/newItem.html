@@ -246,9 +246,9 @@ document.body.className += ' jsenabled';
         {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 		<form enctype="multipart/form-data" action="{% url 'generate' %}" method="post">
         {% csrf_token %}
-		
-		<img src="3.jpg">
-   <p><input src="3.jpg" alt="Фото Вашего предмета" type="file" name="inPhoto" accept="image/*"></p>
+		{% load static %}
+		<img src="{% static '3.jpg' %}">
+   <p><input src="{% static '3.jpg' %}" alt="Фото Вашего предмета" type="file" name="inPhoto" accept="image/*"></p>
  </div>
  
  
