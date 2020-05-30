@@ -1,0 +1,138 @@
+body {
+	border-top: 10px solid #646464;
+	color: #8f8f8f;
+	font: 14px PT Sans;
+	background-color: #f8f8f8;
+	margin: 0;
+	height: 100%;
+}
+input[type="text"] {
+	background-color: #f7f7f7;
+	border: 1px solid #aaaaaa;
+	height: 21px;
+	width: 190px;
+	color: black;
+	padding: 0 10px;
+	vertical-align: top;
+	margin-right: 16px;
+	text-align: left;
+}
+
+.img-container{
+	position: left;
+	margin: 10px;
+	height: 130px;
+	width: 130px;
+	background-color: red;
+}
+
+.text-container{
+	width: 570px;
+	position: center-left;
+	height: 130px;
+	margin-left: auto;
+	text-align: left;
+	padding: 30px 0px;
+	margin-top: 10px;
+	margin-right: 0;
+	padding-right: 10px;
+}
+
+footer {
+	bottom: 0;
+	width: 100%;
+	background: #646464;
+	color: #dbdbdb;
+	font-size: 14px;
+}
+
+.ob{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	height: 150px;
+	background-color: #bfbfbf;
+	margin: 0 auto;
+	border-radius: 8px 8px 8px 8px;
+	margin-top: 7px;
+}
+
+.cont-ob{
+    text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-content: space-between;
+	margin-bottom: 7px;
+	margin-top: 2px;
+}
+
+.container-forms {
+    display: flex;
+    justify-content: start;
+	padding: 9x 10px 10px 100px;
+}
+
+.searchB{
+	position: absolute!important;
+	right: 0;
+	top: 0;
+	padding: 10px 30px;
+	height: 25px;
+}
+
+.navbar {
+	position: relative;
+    overflow: hidden;
+	border: 1px solid #296e3c;
+    background-color: #37b047;
+	height: 50px;
+    font-family: PT Sans;
+	border-radius: 8px 8px 8px 8px;
+	}
+	
+.container{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.container-white {
+    position: relative;
+	border: 1px solid #fff;
+	background-color: #fff;
+	font: PT Sans;
+	height: 70;
+}
+
+.navbar-gray {
+	position: relative;
+	overflow: hidden;
+	background-color: #646464;
+	border: 20px solid #646464;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.add-obj-button {
+	color: white;
+	background: #37b047;
+	border: 1px solid #296e3c;
+	border-radius: 3px 3px 3px 3px;
+	height: 25px;
+	width: 175px;
+	text-align: center;
+}
+
+.a-o-container {
+  position: absolute!important;
+  top: 0;
+  right: 0;
+  padding: 24px 24px;
+}
+
+
+

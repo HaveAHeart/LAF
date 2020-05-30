@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Бюро находок СПбПУ</title>
+	<style>
+		body {
+	border-top: 10px solid #646464;
+	color: #8f8f8f;
+	font: 14px PT Sans;
+	background-color: #f8f8f8;
+	margin: 0;
+	height: 100%;
+}
+input[type="text"] {
+	background-color: #f7f7f7;
+	border: 1px solid #aaaaaa;
+	height: 21px;
+	width: 190px;
+	color: black;
+	padding: 0 10px;
+	vertical-align: top;
+	margin-right: 16px;
+	text-align: left;
+}
+
+.img-container{
+	position: left;
+	margin: 10px;
+	height: 130px;
+	width: 130px;
+	background-color: red;
+}
+
+.text-container{
+	width: 570px;
+	position: center-left;
+	height: 130px;
+	margin-left: auto;
+	text-align: left;
+	padding: 30px 0px;
+	margin-top: 10px;
+	margin-right: 0;
+	padding-right: 10px;
+}
+
+footer {
+	bottom: 0;
+	width: 100%;
+	background: #646464;
+	color: #dbdbdb;
+	font-size: 14px;
+}
+
+.ob{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	height: 150px;
+	background-color: #bfbfbf;
+	margin: 0 auto;
+	border-radius: 8px 8px 8px 8px;
+	margin-top: 7px;
+}
+
+.cont-ob{
+    text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-content: space-between;
+	margin-bottom: 7px;
+	margin-top: 2px;
+}
+
+.container-forms {
+    display: flex;
+    justify-content: start;
+	padding: 9x 10px 10px 100px;
+}
+
+.searchB{
+	position: absolute!important;
+	right: 0;
+	top: 0;
+	padding: 10px 30px;
+	height: 25px;
+}
+
+.navbar {
+	position: relative;
+    overflow: hidden;
+	border: 1px solid #296e3c;
+    background-color: #37b047;
+	height: 50px;
+    font-family: PT Sans;
+	border-radius: 8px 8px 8px 8px;
+	}
+
+.container{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.container-white {
+    position: relative;
+	border: 1px solid #fff;
+	background-color: #fff;
+	font: PT Sans;
+	height: 70;
+}
+
+.navbar-gray {
+	position: relative;
+	overflow: hidden;
+	background-color: #646464;
+	border: 20px solid #646464;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.add-obj-button {
+	color: white;
+	background: #37b047;
+	border: 1px solid #296e3c;
+	border-radius: 3px 3px 3px 3px;
+	height: 25px;
+	width: 175px;
+	text-align: center;
+}
+
+.a-o-container {
+  position: absolute!important;
+  top: 0;
+  right: 0;
+  padding: 24px 24px;
+}
+
+
+
+
+	</style>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://dl.spbstu.ru/theme/styles.php/polytech5/1587677980_1587483124/all"/>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<div class="container-white">
+	<img src="https://lpmtech.ru/wp-content/uploads/2017/09/-1-e1549620837142.png" alt="Politech logo" width="270" height="68">
+	<div class="a-o-container">
+		<form enctype="multipart/form-data" action="{% url 'newItem' %}" method="post">
+			{% csrf_token %}
+			<input class="add-obj-button" type="submit" value="Добавить объявление">
+		</form>
+	</div>
+</div>
+	<div id="wrapper">
+		<header>
+			<div class="navbar-gray">
+			<div class="container">
+			<div class="navbar">
+			<div class="container-forms">
+			<form id="search" action="{% url 'search' %}" method="post">
+				{% csrf_token %}
+				<input type="text" name="searchText" placeholder="Введите текст для поиска">
+
+					<select size="1"  name="searchType" width=380>
+<option selected disabled>Выберите категорию</option>
+<option value="Документы">Документы</option>
+<option value="БСК">БСК</option>
+<option value="Паспорта">Паспорта</option>
+<option value="Конспекты, тетради e.t.c">Конспекты, тетради и др.</option>
+<option value="Студенческие билеты">Студенческие билеты</option>
+<option value="Зачётные книжки">Зачётные книжки</option>
+<option value="Аксессуары(Одежда)">Аксессуары (Одежда)</option>
+<option value="Верхняя одежда">Верхняя одежда</option>
+<option value="Ювелирные изделия">Ювелирные изделия</option>
+<option value="Ключи">Ключи</option>
+<option value="Зонты">Зонты</option>
+<option value="Книги">Книги</option>
+<option value="Пеналы">Пеналы</option>
+<option value="Рюкзаки/Сумки">Рюкзаки/Сумки</option>
+<option value="Ноутбуки">Ноутбуки</option>
+<option value="Телефоны/Планшеты">Телефоны/Планшеты</option>
+<option value="Аксессуары(Электроника)">Аксессуары (Электроника)</option>
+<option value="Средства личной гигиены">Средства личной гигиены</option>
+<option value="Самокаты/Скейтборды e.t.c">Самокаты/Скейтборды и др</option>
+<option value="Другое">Другое</option>
+</select>
+			</div>
+			<div class="searchB">
+			<input type="submit" value="Поиск">
+			</div>
+			</div>
+			</div>
+			</div>
+			</form>
+		</header>
+		{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+		{% csrf_token %}
+		{% for ad in latest_ads %}
+	<div class="cont-ob">
+        <div class="ob">
+		<div class="img-container"><img src="foto1.jpg" width="130" height="130"></div>
+		<div class="text-container">
+		  <ul>
+			<li>{{ ad.name }}</li>
+			<li>{{ ad.type }}</li>
+			<li>{{ ad.location }}</li>
+			<li>{{ ad.time }}</li>
+		</ul>
+		</div>
+		</div>
+      </div>
+		{% endfor %}
+<footer id="page-footer" class="p-y-1">
+<div class="footer-bottom">
+&nbsp; &nbsp; &nbsp;
+<a href="http://www.spbstu.ru/" target="_blank">
+<img alt="" src="https://dl.spbstu.ru/theme/polytech5/pix/poly-logo.svg">
+</a>
+<a href="http://open.spbstu.ru/" target="_blank">
+<img alt="" src="https://dl.spbstu.ru/theme/polytech5/pix/logo-open.svg">
+</a>
+<p>
+<span> &nbsp; &nbsp; &nbsp;Сайт Электронного бюро находок СПБПУ, подготовлен командой ИКНТ-931 <p>
+&nbsp; &nbsp; &nbsp;2020 г.</span>
+</div>
+</footer>
+</footer>
+</body>
+</html>

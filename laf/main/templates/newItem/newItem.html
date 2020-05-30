@@ -1,0 +1,327 @@
+<html  dir="ltr" lang="ru" xml:lang="ru">
+<head>
+    <title>Добавление Вышего объявления</title>
+    <link rel="shortcut icon" href="2.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Бюро находок" />
+<link rel="stylesheet" type="text/css" href="fordobaw.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://dl.spbstu.ru/theme/styles.php/polytech5/1587677980_1587483124/all" />
+
+
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="https://dl.spbstu.ru/theme/polytech5/revslider-standalone/revslider/public/assets/css/settings.css"/>
+<style>
+body {
+border-top: 10px solid #646464;
+color: #8f8f8f;
+font: 14px PT Sans;
+background-color: #f8f8f8;
+margin: 0;
+height: 100%;
+}
+
+input[type="text"] {
+   border: 1px solid #37b34a; //цвет рамки
+   border-radius: 10px; //закругление углов (общее)
+   -webkit-border-radius: 5px; //закругление углов (Google Chrome)
+   -moz-border-radius: 5px; //закругление углов (FireFox)
+   -khtml-border-radius: 5px; //закругление углов (Safari)
+   background: #626462 !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
+   outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
+   height: 24px; // высота на свое усмотрение
+   width: 120px; // ширина на свое усмотрение
+   color: #37b34a; //цвет шрифта в обычном состоянии
+   font-size: 11px; // Размер шрифта
+   font-family: Tahoma; // Стиль шрифта
+}
+
+select {
+   border: 1px solid #37b34a; //цвет рамки
+   border-radius: 10px; //закругление углов (общее)
+   -webkit-border-radius: 10px; //закругление углов (Google Chrome)
+   -moz-border-radius: 5px; //закругление углов (FireFox)
+   -khtml-border-radius: 5px; //закругление углов (Safari)
+   background: #626462 !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
+   outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
+   height: 24px; // высота на свое усмотрение
+   width: 1200px; // ширина на свое усмотрение
+   color: #37b34a; //цвет шрифта в обычном состоянии
+   font-size: 11px; // Размер шрифта
+   font-family: Tahoma; // Стиль шрифта
+}
+
+textarea {
+   border: 1px solid #37b34a; //цвет рамки
+   border-radius: 10px; //закругление углов (общее)
+   -webkit-border-radius: 5px; //закругление углов (Google Chrome)
+   -moz-border-radius: 5px; //закругление углов (FireFox)
+   -khtml-border-radius: 5px; //закругление углов (Safari)
+   background: #626462 !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
+   outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
+   height: 24px; // высота на свое усмотрение
+   width: 120px; // ширина на свое усмотрение
+   color: #37b34a; //цвет шрифта в обычном состоянии
+   font-size: 11px; // Размер шрифта
+   font-family: Tahoma; // Стиль шрифта
+}
+
+footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+background: #646464;
+color: #dbdbdb;
+font-size: 14px;
+}
+
+.container-forms {
+display: flex;
+justify-content: start;
+padding: 11px 10px 10px 100px;
+}
+
+.searchB{
+position: absolute!important;
+right: 0;
+top: 0;
+padding: 14px 30px;
+}
+
+.navbar {
+position: relative;
+overflow: hidden;
+border: 1px solid #296e3c;
+background-color: #37b047;
+height: 50px;
+font-family: PT Sans;
+border-radius: 8px 8px 8px 8px;
+}
+
+.container{
+width: 60%;
+margin: 0 auto;
+}
+
+.container-white {
+position: relative;
+border: 1px solid #fff;
+background-color: #fff;
+font: PT Sans;
+height: 80;
+}
+
+.container-white-suka {
+position: relative;
+border: 1px solid #fff;
+background-color: #fff;
+font: PT Sans;
+height: 80;
+border-bottom: 10px solid #646464;
+}
+
+.navbar-gray {
+position: relative;
+overflow: hidden;
+background-color: #646464;
+border: 20px solid #646464;
+}
+
+.top-menu li {
+display: inline-block;
+padding: 10px 30px;
+margin: 0;
+}
+
+.add-obj-button {
+color: white;
+background: #37b047;
+border: 1px solid #296e3c;
+border-radius: 3px 3px 3px 3px;
+height: 25px;
+width: 175px;
+vertical-align: middle;
+text-align: center;
+}
+
+.a-o-container {
+position: absolute!important;
+top: 0;
+right: 0;
+padding: 24px 24px;
+}
+
+
+
+
+.button-send {
+
+color: white;
+background: #37b047;
+border: 1px solid #296e3c;
+border-radius: 3px 3px 3px 3px;
+height: 25px;
+width: 175px;
+text-align: center;
+}
+
+.inline{
+ margin: 0 auto;
+ position: relative;
+ float: left;
+ width: 250px;
+ height: 250px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+</style>
+<script type="text/javascript" src="https://dl.spbstu.ru/lib/javascript.php/-1/lib/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://dl.spbstu.ru/theme/polytech5/revslider-standalone/revslider/public/assets/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="https://dl.spbstu.ru/theme/polytech5/revslider-standalone/revslider/public/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" id="revslider_script" src="https://dl.spbstu.ru/theme/polytech5/revslider-standalone/assets/js/revslider.js"></script>
+  
+    
+</head>
+
+<body  id="page-site-index" class="format-site course path-site safari dir-ltr lang-ru yui-skin-sam yui3-skin-sam dl-spbstu-ru pagelayout-frontpage course-1 context-2 notloggedin ">
+
+<div id="page-wrapper">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Перейти к основному содержанию</a>
+</div><script type="text/javascript" src="https://dl.spbstu.ru/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://dl.spbstu.ru/lib/javascript.php/1587677980/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<nav class="container-white-suka">
+            <img src="https://lpmtech.ru/wp-content/uploads/2017/09/-1-e1549620837142.png" width="270" height="68">   <!--
+	↓↓↓↓↓↓Сюды лепить сслыкку на главнуб бюро↓↓↓↓↓↓ 
+</div>
+</div>
+</div>
+-->
+            
+           
+            <ul class="nav navbar-nav ml-auto">
+                <div class="d-none d-lg-block">
+                
+            </div>
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+                
+                </li>
+                <!-- user_menu -->
+                <li class="nav-item d-flex align-items-center">
+                <div class="a-o-container">
+                <form enctype="multipart/form-data" action="{% url 'index' %}" method="post">
+                    {% csrf_token %}
+				<input class="add-obj-button" type="submit" value="На главную">
+                </form>
+				</div>
+            </li>
+				</li>
+            </ul>
+            <!-- search_box -->
+    </nav>
+
+<!-- Дальше само тело -->
+
+
+
+<div class="revslider" data-alias="start11"></div>
+
+    <main class="flex-center">
+	<div>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+		<form enctype="multipart/form-data" action="{% url 'generate' %}" method="post">
+        {% csrf_token %}
+		
+		<img src="3.jpg">
+   <p><input src="3.jpg" alt="Фото Вашего предмета" type="file" name="inPhoto" accept="image/*"></p>
+ </div>
+ 
+ 
+ <p>
+ <p>
+ <p>
+ <p>
+ 
+ <div>
+ <p>
+  <input type="text" placeholder="Что вы нашли" size="60" name="inName">
+  
+  <p>
+  
+  <input type="text" placeholder="Где вы нашли" size="60" name="inLocation">
+  
+  <p>
+
+	<select size="1" width=380 name="inType">
+    <option selected disabled>Категория</option>
+    <option value="Документы">Документы</option>
+    <option value="БСК">БСК</option>
+    <option value="Паспорта">Паспорта</option>
+    <option value="Конспекты, тетради и т.д.">Конспекты, тетради и т.д.</option>
+	<option value="Студенческие билеты">Студенческие билеты</option>
+	<option value="Зачётные книжки">Зачётные книжки</option>
+	<option value="Аксессуары(Одежда)">Аксессуары(Одежда)</option>
+	<option value="Верхняя одежда">Верхняя одежда</option>
+	<option value="Ювелирные изделия">Ювелирные изделия</option>
+	<option value="Ключи">Ключи</option>
+	<option value="Зонты">Зонты</option>
+	<option value="Книги">Книги</option>
+	<option value="Пеналы">Пеналы</option>
+	<option value="Рюкзаки/Сумки">Рюкзаки/Сумки</option>
+	<option value="Ноутбуки">Ноутбуки</option>
+	<option value="Телефоны/Планшеты">Телефоны/Планшеты</option>
+	<option value="Аксессуары(Электроника)">Аксессуары(Электроника)</option>
+	<option value="Средства личной гигиены">Средства личной гигиены</option>
+	<option value="Самокаты/Скейтборды и т.д.">Самокаты/Скейтборды и т.д.</option>
+	<option value="Другое">Другое</option>
+   </select>
+   <p>
+   Контактные данные:
+   <p>
+   <input type="text" placeholder="Ваш e-mail" size="20" name="inEmail">
+   <input type="text" placeholder="Ваш телефон*" size="20" name="inPhone">
+   <input type="text" placeholder="Ваш VK ID*" size="20" name="inVKID">
+   
+   <p>
+   <textarea cols="60" rows="3" placeholder="Описание:" name="inDescription"></textarea>
+   <p>
+   *Необязательные поля </p>
+  <p align="right"><input class="button-send" align=”right” type="submit" value="Отправить"></p>
+</div>
+</main>
+ </form>
+<!-- Футер(вдуг оставим)  -->
+<footer id="page-footer" class="p-y-1">
+<div class="footer-bottom">
+ &nbsp; &nbsp; &nbsp;       
+<a href="http://www.spbstu.ru/" target="_blank">
+<img alt="" src="https://dl.spbstu.ru/theme/polytech5/pix/poly-logo.svg">
+</a>
+<a href="http://open.spbstu.ru/" target="_blank">
+<img alt="" src="https://dl.spbstu.ru/theme/polytech5/pix/logo-open.svg">
+</a>
+<p>
+ <span>	&nbsp; &nbsp; &nbsp;Сайт Электронного бюро находок СПБПУ, подготовлен командой ИКНТ-931  <p>
+&nbsp; &nbsp; &nbsp;2020 г.</span>
+<!--<span><a href="http://www.spbstu.ru/upload/personal_data_policy.pdf" target="_blank">Политика конфиденциальности</a></span> -->
+</div>
+</footer>
+</body>
+
+
+</html>
